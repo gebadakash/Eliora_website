@@ -1,0 +1,118 @@
+/* #app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+} */
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 600px;
+  margin-bottom: 40px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+.card-container{
+
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+}
+
+
+
+.card-container:hover .card-content .card-body p{
+
+font-weight: 700;
+
+}
+
+.image-container img{
+
+  overflow: hidden;
+  height: 200px;
+
+}
+
+.card-content{
+
+  margin: 1rem;
+  margin-top: 0.5rem;
+  /* font-weight: bold; */
+  text-align: justify;
+
+}
+
+.card-title{
+
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.card-title p{
+
+  font-size: larger;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 376px) {
+
+  .TechnologyHeading{
+
+    position: relative;
+    top: -250px;
+  }
+
+  .mySwiper{
+    position: relative;
+    top: -270px;
+  }
+}
+
+
+@media only screen and (min-width: 377px) and (max-width: 769px) {
+
+
+  .TechnologyHeading{
+
+    position: relative;
+    top: -380px;
+  }
+
+  .mySwiper{
+    position: relative;
+    top: -425px;
+    
+  }
+
+  .swiper{
+
+    margin-bottom: 0;
+  }
+
+}

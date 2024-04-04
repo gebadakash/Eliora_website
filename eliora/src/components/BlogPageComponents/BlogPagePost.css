@@ -1,0 +1,7 @@
+.blog-img img:hover{
+    
+  transition: transform .2s ease; 
+  transform: scale(1.1); 
+
+}
+

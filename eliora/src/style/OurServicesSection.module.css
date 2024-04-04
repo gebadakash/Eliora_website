@@ -1,0 +1,78 @@
+@media only screen and (max-width: 376px) {
+
+    .Buisness{
+
+        position: relative;
+        top: -200px;
+    }
+}
+
+
+@media only screen and (min-width: 377px) and (max-width: 769px) {
+
+    .Buisness{
+
+        position: relative;
+        top: -200px;
+    }
+
+
+
+}
+
+.heading{
+
+    font-weight: 800;
+    margin-bottom: 0;
+    font-family:"Inter", sans-serif;
+    color: crimson;
+}
+
+
+.serviceItem{
+
+    position: relative;
+    height: 409px;
+    padding: 0 30px;
+    transition: .5s;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* .serviceItem:hover {
+    background: crimson;
+    box-shadow: 1px 1px 5px rgb(220, 220, 220);
+}
+
+.serviceItem:hover p{
+    color: white;
+} */
+
+.serviceItem p{
+
+    margin-bottom: 40px;
+    margin-top: 10px;
+    padding: 20px 20px 20px 20px;
+}
+
+.serviceItem a i{
+
+    size: 12px;
+}
+
+
+.serviceItem h4{
+    font-family:"Inter", sans-serif;
+    font-weight: bold;
+    
+}
+
+.serviceItem a:hover{
+
+    background-color: crimson;
+}
+
+.serviceItem a:hover i{
+
+    color: white;
+}
