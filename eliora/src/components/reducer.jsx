@@ -9,8 +9,6 @@ const reducer = (state, action) => {
           AgumentedContent1:action.payload.AgumentedContent1,
           AgumentedContent2:action.payload.AgumentedContent2,
           AgumentedImage:action.payload.AgumentedImage,
-
-
         };
       }
     
@@ -23,8 +21,6 @@ const reducer = (state, action) => {
           AgumentedContent1:action.payload.AgumentedContent1,
           AgumentedContent2:action.payload.AgumentedContent2,
           AgumentedImage:action.payload.AgumentedImage,
-
-
         };
       }
 
@@ -75,7 +71,84 @@ const reducer = (state, action) => {
           subTitle:action.payload.subTitle
         }
       }
-  
+
+      if(action.type === "ABOUT_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
+      if(action.type === "WEB_DESIGNING_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+      if(action.type === "WORDPRESS_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+      if(action.type === "APPDEVELOPMENT_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+      if(action.type === "Ecommerce_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+      if(action.type === "Graphics_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
+      if(action.type === "DigitialMarketing_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
+      if(action.type === "UIAndUX_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
+      if(action.type === "PORTFOLIO_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
       return state;
 }
 

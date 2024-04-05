@@ -15,6 +15,13 @@ import Blog from "./pages/Blog.jsx";
 import PayNow from "./pages/PayNow.jsx";
 import Placement from "./pages/Placement.jsx";
 import { AppProvider } from "./components/context.jsx";
+import WebDesigning from "./pages/WebDesigning.jsx";
+import WordPress from "./pages/WordPress.jsx";
+import AppDevelopment from "./pages/AppDevelopment.jsx";
+import Ecommerce from "./pages/EcommerceDevelopment.jsx";
+import GraphicsLogo from "./pages/GraphicsLogo.jsx";
+import DigitalMarketing from "./pages/DigitalMarketing.jsx";
+import UiAndUx from "./pages/UiAndUx.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +52,42 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "/wordpressdevelopment",
+        element: <WordPress />,
+      },
+
+      {
+        path: "/appdevelopment",
+        element: <AppDevelopment />,
+      },
+
+      {
+        path: "/ecommercedevelopment",
+        element: <Ecommerce/>,
+      },
+
+      {
+        path: "/graphicsandlogo",
+        element: <GraphicsLogo/>,
+      },
+
+      {
+        path: "/digitalandcontentmarketing",
+        element: <DigitalMarketing/>,
+      },
+
+      {
+        path: "/uiuxdesign",
+        element: <UiAndUx/>,
+      },
+
+      {
+        path:"/websitedesign",
+        element:<WebDesigning/>
+
+      },
+
+      {
         path: "/clients",
         element: <Clients />,
       },
@@ -57,7 +100,7 @@ const router = createBrowserRouter([
         element: <Gallery />,
       },
       {
-        path: "/portfolio",
+        path: "/ourportfolio",
         element: <Portfolio />,
       },
       {

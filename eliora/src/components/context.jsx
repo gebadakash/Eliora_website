@@ -12,7 +12,6 @@ const initialState ={
     AgumentedContent1:``,
     AgumentedContent2:``,
     AgumentedImage:"",
-    
 };
 
 const AppProvider = ({children}) =>{
@@ -111,11 +110,117 @@ const AppProvider = ({children}) =>{
         })
     }
 
+    const updateAboutPage = () => {
+
+        return dispatch({
+            type:"ABOUT_PAGE",
+            payload:{
+                title:"About Us",
+                subTitle:"About Us"
+            }
+        })
+    }
+
+
+    const updateWebDesigningPage = () => {
+
+        return dispatch({
+            type:"WEB_DESIGNING_PAGE",
+            payload:{
+                title:"Web Designing",
+                subTitle:"Web Designing"
+            }
+        })
+    }
+
+
+    const updateWordPressDevelopmentPage = () => {
+
+        return dispatch({
+            type:"WORDPRESS_PAGE",
+            payload:{
+                title:"WordPress Development",
+                subTitle:"WordPress Development"
+            }
+        })
+    }
+
+
+    const updateAppDevelopmentPage = () => {
+
+        return dispatch({
+            type:"APPDEVELOPMENT_PAGE",
+            payload:{
+                title:"App Development",
+                subTitle:"App Development"
+            }
+        })
+    }
+
+
+    const updateEcommerceDevelopmentPage = () => {
+
+        return dispatch({
+            type:"Ecommerce_PAGE",
+            payload:{
+                title:"E-commerce Development",
+                subTitle:"E-commerce Development"
+            }
+        })
+    }
+
+    const updateGraphicsAndLogoPage = () => {
+
+        return dispatch({
+            type:"Graphics_PAGE",
+            payload:{
+                title:"Graphic And Logo Design",
+                subTitle:"Graphic And Logo Design"
+            }
+        })
+    }
+
+    const updateDigitialMarketingPage = () => {
+
+        return dispatch({
+            type:"DigitialMarketing_PAGE",
+            payload:{
+                title:"Digital & Content Marketing",
+                subTitle:"Digital & Content Marketing"
+            }
+        })
+    }
+
+    const updateUiAndUxDesignPage = () => {
+
+        return dispatch({
+            type:"UIAndUX_PAGE",
+            payload:{
+                title:"UI and UX Designing",
+                subTitle:"UI and UX Designing"
+            }
+        })
+    }
+
+    const updatePortFolioPage = () => {
+
+        return dispatch({
+            type:"PORTFOLIO_PAGE",
+            payload:{
+                title:"Our Portfolio",
+                subTitle:"Our Portfolio"
+            }
+        })
+    }
+
 
         return (
             <AppContext.Provider
             value={{...state, updatePlacementPage,updateContractPage,updateClientPage,
-            updateGalleryPage,updateBlogPostPage,updateCareerPage,updateWebDevelopmentPage}}>
+            updateGalleryPage,updateBlogPostPage,updateCareerPage,updateWebDevelopmentPage,
+            updateAboutPage,updateWebDesigningPage,updateWordPressDevelopmentPage,updateAppDevelopmentPage,
+            updateEcommerceDevelopmentPage,updateGraphicsAndLogoPage,updateDigitialMarketingPage,
+            updateUiAndUxDesignPage,updatePortFolioPage}}>
                 {children}
             </AppContext.Provider>
         );

@@ -7,37 +7,29 @@ const Frequently = () => {
 
     const faqData = [
         {
-            question: "What is web design?",
-            answer: "Web design is the process of creating and planning the layout, appearance, and functionality of websites. It involves various elements such as graphic design, user experience (UX) design, and user interface (UI) design to create a visually appealing and user-friendly website."
+            question: "What types of websites do you build?",
+            answer: "We specialize in building a wide range of websites, from simple static pages to dynamic web applications. Our expertise includes e-commerce platforms, content management systems (CMS), corporate websites, blogs, portfolio sites, and more. Whether you need a small business website or a complex web application, we have you covered."
         },
         {
-            question: "Why is web design important for my business?",
-            answer: "An effective web design is crucial as it leaves a lasting impression on your visitors. A well-designed website can enhance your brand image, improve user engagement, boost conversions, and ultimately contribute to the success of your business."
+            question: "Do you offer custom web development services?",
+            answer: "Absolutely! We take pride in our ability to deliver tailor-made solutions that cater to your specific business needs. Our team of skilled developers and designers will work closely with you to understand your requirements and create a unique website that reflects your brand identity and objectives."
         },
         {
-            question: "Do you offer custom web design or templates?",
-            answer: "We offer both options. We can create a custom web design tailored to your brand and requirements, or we can use pre-designed templates if you prefer a more budget-friendly solution."
+            question: "Can you optimize websites for mobile devices?",
+            answer: "Security is a top priority for us. We follow industry best practices and implement robust security measures to protect your website from potential threats. This includes secure coding practices, SSL certificates for data encryption, and regular security audits to identify and address vulnerabilities proactively."
         },
         {
-            question: "Can you redesign my existing website?",
-            answer: "Yes, we offer website redesign services to update the look and functionality of your current site, making it more modern and user-friendly."
+            question: "Can you help with website maintenance and updates?",
+            answer: "Yes, we offer website maintenance and support services to keep your site running smoothly. Whether you need routine updates, bug fixes, or security patches, our team is here to assist you. We also provide ongoing support and can help you scale your website as your business grows."
         },
         {
-            question: "How long does it take to design a website?",
-            answer: "The timeline for web design varies depending on the complexity and scope of the project. A simple website might take a few weeks, while more complex ones can take several months to complete."
+            question: "What if I need to make changes to my website in the future?",
+            answer: "We design websites with flexibility in mind. If you need to make changes or add new features down the road, we can easily accommodate those requests. Our websites are built to be easily maintainable and scalable, ensuring your online presence remains up-to-date and relevant."
         },
         {
-            question: "Will my website be mobile-friendly and responsive?",
-            answer: "Absolutely! We prioritize mobile responsiveness to ensure your website looks and functions flawlessly on all devices, including smartphones and tablets."
+            question: "How do I get started with your web development services?",
+            answer: "Getting started is easy! Simply reach out to us through our contact page or give us a call. We'll set up an initial consultation to discuss your project requirements and goals. From there, we'll provide you with a detailed proposal and a roadmap for your exciting web development journey."
         },
-        {
-            question: "Can you integrate social media into my website?",
-            answer: "Absolutely! We can integrate social media icons and links to your social profiles, allowing visitors to connect and share your content easily."
-        },
-        {
-            question: "How do I get started with your web design services?",
-            answer: "To get started, simply contact us through our website or give us a call. We'll discuss your requirements, goals, and budget, and then provide you with a personalized plan to proceed with your web design project."
-        }
     ];
 
 
