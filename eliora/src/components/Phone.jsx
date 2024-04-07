@@ -1,4 +1,4 @@
-import phoneLogo from "../../images/phoneIcon.png";
+import phoneLogo from "../../public/images/phoneIcon.png";
 
 const Phone = () => {
   return (
