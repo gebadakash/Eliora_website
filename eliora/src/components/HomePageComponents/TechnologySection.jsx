@@ -11,7 +11,7 @@ const TechnologySection = () => {
   return (
     <>
 
-      <h1 className="TechnologyHeading mb-5" style={{ textAlign: "center", marginTop:"50px", fontFamily:"sans-serif", color:"crimson" }}>
+      <h1 className="TechnologyHeading mb-5" style={{ textAlign: "center", marginTop:"120px", fontFamily:"sans-serif", color:"crimson" }}>
         Technologies We Use
       </h1>
       <Swiper
