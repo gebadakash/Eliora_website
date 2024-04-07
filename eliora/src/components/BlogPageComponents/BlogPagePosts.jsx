@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./BlogPagePost.css";
 
 
@@ -10,7 +11,7 @@ const BlogPagePosts = () => {
           title: "How Augmentation Is Different From Recruitment And Placement.",
           content:
             "Placement is the official assignment of a chosen applicant to a particular post; augmentation is the...",
-          link: "Read More ",
+          Button: "Read More ",
         },
     
         {
@@ -20,7 +21,7 @@ const BlogPagePosts = () => {
           title: "The Advantages of Workforce Sourcing for Businesses",
           content:
             "Businesses may now access talent like never before thanks to workforce sourcing. It provides access ...",
-          link: "Read More ",
+          Button: "Read More ",
         },
     
         {
@@ -30,7 +31,7 @@ const BlogPagePosts = () => {
           title: "Optimising Your Workforce with Technology-Driven Staffing Solutions",
           content:
             "In our most recent blog, we discuss how technology-driven staffing solutions are redefining workforc...",
-          link: "Read More ",
+          Button: "Read More ",
         },
 
         {
@@ -40,7 +41,7 @@ const BlogPagePosts = () => {
             title: "What Recruiters Look for in Your Resume",
             content:
               "A well-structured CV that highlights your accomplishments, experience, and applicable abilities is w...",
-              link: "Read More ",
+              Button: "Read More ",
           },
 
 
@@ -51,7 +52,7 @@ const BlogPagePosts = () => {
             title: "How Staffing Differs from Recruitment",
             content:
               "... ",
-              link: "Read More ",
+              Button: "Read More ",
           },
 
 
@@ -62,7 +63,7 @@ const BlogPagePosts = () => {
             title: "Solar Power and Beyond - Renewable Energy's Bright Future",
             content:
               "Discover about sustainable energy sources that go beyond solar energy. In this blog, we examine the ...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
 
@@ -73,7 +74,7 @@ const BlogPagePosts = () => {
             title: "Top Tips for Working with a Recruiter",
             content:
               "Your job search or career progress may benefit from working with a recruiter. Here are some importan...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
 
@@ -84,7 +85,7 @@ const BlogPagePosts = () => {
             title: "Blockchain Demystification � From Cryptocurrencies to Real-World Applications",
             content:
               "Beyond Cryptocurrency, study the fascinating world of blockchain technology. This blog will clarify ... ",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -94,7 +95,7 @@ const BlogPagePosts = () => {
             title: "Saving Lives and Changing Diagnostics - Artificial Intelligence's Role in Healthcare",
             content:
               "Healthcare is being revolutionized by artificial intelligence, which is advancing diagnostics, provi...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
 
@@ -105,7 +106,7 @@ const BlogPagePosts = () => {
             title: "Exploring the Future - The Growth of Wireless Communication to 6G",
             content:
               "Due to its amazing speed, low latency, hyper-connectivity, and virtual reality capabilities, 6G tech... ",
-              link: "Read More ",
+              Button: "Read More",
           },
 
 
@@ -116,7 +117,7 @@ const BlogPagePosts = () => {
             title: "Effective Strategies for Social Media Marketing in 2023",
             content:
               "The evolving landscape of social media marketing has transformed the way businesses connect with the...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -126,7 +127,7 @@ const BlogPagePosts = () => {
             title: "Discover The 5 Essential Reason For A Website",
             content:
               "Having a website is crucial for establishing and maintaining an online presence. It serves as a digi...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -136,7 +137,7 @@ const BlogPagePosts = () => {
             title: "How to Redesign Your Website for Increased Traffic and Sales",
             content:
               "In today's world where everything is done online, maintaining an effective online presence is crucia...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -146,7 +147,7 @@ const BlogPagePosts = () => {
             title: "What Distinguishes Web Designing from Web Development?",
             content:
               "Web designing and web development are two different but interconnected disciplines pertaining to web...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -156,7 +157,7 @@ const BlogPagePosts = () => {
             title: "Crafting an Industry-Tailored Website",
             content:
               "Crafting an industry-tailored website involves designing and developing a digital platform that is s...",
-              link: "Read More ",
+              Button: "Read More",
           },
 
           {
@@ -166,7 +167,7 @@ const BlogPagePosts = () => {
             title: "Exploring the Contrast: Mobile App vs. Web App",
             content:
               "Mobile apps and web apps serve distinct purposes in the digital landscape. While mobile apps are spe...r",
-              link: "Read More ",
+              Button: "Read More",
           },
       ];
 
@@ -219,13 +220,13 @@ const BlogPagePosts = () => {
                   <p style={{ textAlign: "justify;", wordSpacing: "-2px;", fontFamily:"sans-serif" }}>
                     {row.content}
                   </p>
-                  <a
+                  <NavLink
                     className="text-uppercase btn btn-danger py-2 px-4"
-                    href="blog/how-augmentation-is-different-from-recruitment-and-placement."
+                    to="/blogDetails"
                     style={{textDecoration:"none"}}
                   >
-                    {row.link}
-                  </a>
+                    {row.Button}
+                  </NavLink>
                 </div>
               </div>
             </div>

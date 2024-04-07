@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import PlacementHeader from "../components/PlacementPageComponents/PlacementHeader"
-import AppDevelopmentService from "../components/AppDevelopmentComponents/AppDevelopmentService";
-import AppDevelopmentAbout from "../components/AppDevelopmentComponents/AppDevelopmentAbout";
-import AppDevelopmentOneStop from "../components/AppDevelopmentComponents/AppDevelopmentOneStop";
 import Frequently from "../components/AppDevelopmentComponents/Frequently";
 import { useGlobalContext } from "../components/context";
 import AppData from "../components/AppDevelopmentComponents/AppData";
+import Discover from "../components/Discover";
+import Service from "../components/Service";
+import Excellence from "../components/Excellence";
 
 
 const AppDevelopment = () => {
@@ -17,9 +17,9 @@ const AppDevelopment = () => {
   return (
     <>
       <PlacementHeader/>
-      <AppDevelopmentService/>
-      <AppDevelopmentAbout/>
-      <AppDevelopmentOneStop/>
+      <Discover/>
+      <Service/>
+      <Excellence/>
       <AppData/>
       <Frequently/>
     </>

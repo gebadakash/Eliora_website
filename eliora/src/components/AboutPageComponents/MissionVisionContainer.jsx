@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceItem = ({ title, description }) => (
   <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s" style={{ visibility: "visible", animationDelay: "0.3s", animationName: "zoomIn" }}>
-    <div className="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+    <div className="service-item bg-light shadow rounded d-flex flex-column align-items-center justify-content-center text-center">
       <h4 className="mb-3 text-danger" style={{fontWeight:"700"}}>{title}</h4>
       <p className="m-0" style={{ textAlign: "justify", wordSpacing: "-2px" }}>{description}</p>
     </div>

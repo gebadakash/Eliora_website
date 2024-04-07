@@ -63,7 +63,7 @@ const AppData = () => {
             {services.map((service, index) => (
               <div key={index} className="col-lg-4 col-md-6  wow zoomIn" data-wow-delay={`${0.3 * (index + 1)}s`} style={{ visibility: 'visible', animationDelay: `${0.3 * (index + 1)}s`, animationName: 'zoomIn' }}>
                 <div className="service-item bg-white shadow rounded d-flex flex-column align-items-center justify-content-center text-center" style={{ height: '520px' }}>
-                  <div>
+                  <div className="mb-4">
                     <img alt={service.title} src={service.image} style={{ width: '160px' }} />
                   </div>
                   <h3 className="mb-3 pt-2 mt-4 text-danger">{service.title}</h3>

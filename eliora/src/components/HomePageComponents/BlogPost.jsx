@@ -1,7 +1,30 @@
+import { NavLink } from "react-router-dom";
 import styles from "../../style/BlogPostSection.module.css";
+import { useEffect } from "react";
 
 
 const BlogPost = () => {
+
+  useEffect(() => {
+
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach(link => {
+      link.addEventListener('click', handleScrollToTop);
+    });
+
+
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', handleScrollToTop);
+      });
+    };
+  }, []);
+
   const rows = [
     {
       image: "../images/AdminBlog.jpg",
@@ -64,7 +87,7 @@ const BlogPost = () => {
                 animationName: "slideInUp;",
               }}
             >
-              <div className={`blog-item rounded overflow-hidden ${styles.blogCard}`}>
+              <div className={`blog-item bg-light shadow rounded overflow-hidden ${styles.blogCard}`}>
                 <div className="blog-img position-relative overflow-hidden">
                   <img
                     alt="staffing services,  recruitment, staffing company, staffing agency"
@@ -89,13 +112,13 @@ const BlogPost = () => {
                   <p style={{ textAlign: "justify;", wordSpacing: "-2px;", fontFamily:"sans-serif", }}>
                     {row.content}
                   </p>
-                  <a
-                    className="text-uppercase"
-                    href="blog/how-augmentation-is-different-from-recruitment-and-placement."
+                  <NavLink
+                    className="text-uppercase navlink"
+                    to="/blog"
                     style={{textDecoration:"none"}}
                   >
                     {row.link}<i className="bi bi-arrow-right"></i>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>

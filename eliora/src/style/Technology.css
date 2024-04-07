@@ -80,39 +80,4 @@ font-weight: 700;
   font-style: italic;
 }
 
-@media only screen and (max-width: 376px) {
 
-  .TechnologyHeading{
-
-    position: relative;
-    top: -250px;
-  }
-
-  .mySwiper{
-    position: relative;
-    top: -270px;
-  }
-}
-
-
-@media only screen and (min-width: 377px) and (max-width: 769px) {
-
-
-  .TechnologyHeading{
-
-    position: relative;
-    top: -380px;
-  }
-
-  .mySwiper{
-    position: relative;
-    top: -425px;
-    
-  }
-
-  .swiper{
-
-    margin-bottom: 0;
-  }
-
-}

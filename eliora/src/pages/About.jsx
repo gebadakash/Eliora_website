@@ -6,6 +6,7 @@ import IndustriesServed from "../components/AboutPageComponents/IndustriesServed
 import MissionVisionContainer from "../components/AboutPageComponents/MissionVisionContainer";
 import "../components/AboutPageComponents/about.css";
 import Facts from "../components/AboutPageComponents/Facts";
+import AboutCards from "../components/AboutPageComponents/AboutCards";
 
 const About = () => {
   const { updateAboutPage } = useGlobalContext();
@@ -19,7 +20,7 @@ const About = () => {
         <IndustriesServed />
         <MissionVisionContainer />
         <Facts/>
-        {/* <AboutCards /> */}
+        <AboutCards/>
 
 
     </>

@@ -1,4 +1,29 @@
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 const DynamicDigital = () => {
+
+  useEffect(() => {
+
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach(link => {
+      link.addEventListener('click', handleScrollToTop);
+    });
+
+
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', handleScrollToTop);
+      });
+    };
+  }, []);
+
+  
   return (
     <div
       className="container-fluid py-5 wow fadeInUp"
@@ -49,9 +74,9 @@ const DynamicDigital = () => {
               Let us assist you in boosting your web presence and attracting
               organic visitors.
             </p>
-            <a
-              href="contact"
-              className="btn btn-danger py-3 px-5 mt-3 wow zoomIn"
+            <NavLink
+              to="/contactus"
+              className="btn btn-danger py-3 px-5 mt-3 wow zoomIn navlink"
               data-wow-delay="0.9s"
               style={{
                 visibility: "visible",
@@ -60,7 +85,7 @@ const DynamicDigital = () => {
               }}
             >
               Experience the difference
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

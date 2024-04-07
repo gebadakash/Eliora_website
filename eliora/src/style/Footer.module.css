@@ -4,14 +4,6 @@
     color: white;
   }
   
-  .ft1 h4 {
-    font-weight: 700;
-    font-family: cursive;
-    letter-spacing: 2px;
-    padding: 0.5rem 0;
-    color: #f60838;
-  }
-
   .contactUs{
 
     margin-top: 100px;
@@ -63,16 +55,18 @@
     font-weight: 200;
   }
 
-  .ft2 .navItem a{
-
-   font-size: 16px;
+  .navItem a {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
   }
 
-  .ft2 .navItem a:hover{
-    color: crimson;
-    transition: color 0.3s ease;
-}
 
+.navItem a:hover {
+  color: crimson;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
 
   .ft2 ul a:hover{
 

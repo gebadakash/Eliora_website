@@ -3,7 +3,7 @@
     .BlogSection{
 
         position: relative;
-        top: -460px;
+        top: -130px;
     }
 }
 
@@ -13,13 +13,9 @@
     .BlogSection{
 
         position: relative;
-        top: -460px;
+        top: -130px;
     }
 
 
 }
 
-.blogCard{
-
-    background-color: rgb(240, 231, 231)
-}

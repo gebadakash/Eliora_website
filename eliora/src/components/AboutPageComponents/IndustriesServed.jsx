@@ -1,7 +1,5 @@
-import { BsCheckCircle } from "react-icons/bs";
-
-const IndustriesServed = () => {
-  const industries = [
+const industries = [
+  [
     "E-Commerce Business",
     "Education",
     "Travel Agencies",
@@ -9,6 +7,8 @@ const IndustriesServed = () => {
     "Hospitality Industry",
     "Food Industry",
     "IT Support",
+  ],
+  [
     "Construction & Building",
     "Doctors and Dentists",
     "Textile",
@@ -16,54 +16,70 @@ const IndustriesServed = () => {
     "Small Businesses",
     "Real Estate",
     "Tech Services",
+  ],
+  [
     "Artist",
     "Accountants",
     "Dry Cleaners",
     "Handymen and Electricians",
     "Automotive Services",
     "Legal Practitioners",
-  ];
+  ],
+];
 
+const IndustriesServed = () => {
   return (
+    <div
+      className="wow fadeInUp mt-sc mt-abn"
+      data-wow-delay="0.1s"
+      style={{
+        visibility: "visible",
+        animationDelay: "0.1s",
+        animationName: "fadeInUp",
+      }}
+    >
       <div
-        className="container py-5  border border-5  rounded-5"
+        className="container-fluid py-5"
+        style={{
+          backgroundImage: "url(images/bannew.png)",
+          backgroundSize: "cover",
+        }}
       >
         <div
-          className="text-center  position-relative pb-3 mb-5 mx-auto"
+          className="section-title text-center position-relative pb-3 mb-5 mx-auto"
           style={{ maxWidth: "600px" }}
         >
-          <h2 className="mb-0 text-dark">Industries We Served</h2>
+          <h1 className="mb-0 text-white">Industries We Served</h1>
         </div>
         <div className="col-lg-12">
           <div className="row g-0 mb-3">
-            <div className="col-sm-1 wow zoomIn" data-wow-delay="0.2s"></div>
-            <div className="col-sm-3 d-flex flex-column justify-content-between wow zoomIn" data-wow-delay="0.2s">
-              {industries.slice(0, 7).map((industry, index) => (
-                <h4 className="mb-3  d-flex align-items-center" key={index} style={{fontSize:"20px"}}>
-                  <BsCheckCircle className=" me-3 text-black bg-light" style={{fontSize:"30px"}}/>
-                  {industry}
-                </h4>
-              ))}
-            </div>
-            <div className="col-sm-4 d-flex flex-column justify-content-between wow zoomIn" data-wow-delay="0.2s">
-              {industries.slice(7, 14).map((industry, index) => (
-                <h4 className="mb-3 d-flex align-items-center" key={index} style={{fontSize:"20px"}}>
-                <BsCheckCircle className=" me-3 text-black bg-light" style={{fontSize:"30px"}}/>
-                  {industry}
-                </h4>
-              ))}
-            </div>
-            <div className="col-sm-4 d-flex flex-column justify-content-between wow zoomIn" data-wow-delay="0.4s">
-              {industries.slice(14).map((industry, index) => (
-                <h4 className="mb-3  d-flex align-items-center" key={index} style={{fontSize:"20px"}}>
-                <BsCheckCircle className=" me-3 text-black bg-light" style={{fontSize:"30px"}}/>
-                  {industry}
-                </h4>
-              ))}
-            </div>
+            <div
+              className="col-sm-1  wow zoomIn"
+              data-wow-delay="0.2s"
+              style={{
+                visibility: "visible",
+                animationDelay: "0.2s",
+                animationName: "zoomIn",
+              }}
+            ></div>
+            {industries.map((column, columnIndex) => (
+              <div
+                key={columnIndex}
+                className={`col-sm-${columnIndex === 0 ? "3" : "4"} wow zoomIn`}
+                data-wow-delay={`${0.2 + columnIndex * 0.2}s`}
+              >
+                {column.map((industry, index) => (
+                  <h5 key={index} className="mb-3 text-white">
+                    <i className="bi bi-check-lg text-danger me-3"></i>
+                    {industry}
+                  </h5>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

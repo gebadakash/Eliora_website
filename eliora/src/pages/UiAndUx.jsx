@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import PlacementHeader from "../components/PlacementPageComponents/PlacementHeader"
 import Frequently from "../components/UIAndUXDesigningPageComponents/Frequently";
 import { useGlobalContext } from "../components/context";
-import UIAndUXServices from "../components/UIAndUXDesigningPageComponents/UIAndUXServices";
-import UIAndUXAbout from "../components/UIAndUXDesigningPageComponents/UIAndUXAbout";
-import UIAndUXPartner from "../components/UIAndUXDesigningPageComponents/UIAndUXPartner";
 import UIAndUXServicesData from "../components/UIAndUXDesigningPageComponents/UIAndUXServicesData";
+import Discover from "../components/Discover";
+import Service from "../components/Service";
+import Excellence from "../components/Excellence";
 
 const UiAndUx = () => {
 
@@ -16,9 +16,9 @@ const UiAndUx = () => {
   return (
     <>
     <PlacementHeader/>
-    <UIAndUXServices/>
-    <UIAndUXAbout/>
-    <UIAndUXPartner/>
+    <Discover/>
+    <Service/>
+    <Excellence/>
     <UIAndUXServicesData/>
     <Frequently/> 
     </>

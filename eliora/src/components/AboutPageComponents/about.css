@@ -1,63 +1,83 @@
-.icons {
-  width: 60px;
-}
-.image {
-  max-height: 600px;
-  object-fit: cover;
-}
-
 .tl {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.tl::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
 .tl-container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
-  width: 60%;
+  width: 50%;
 }
 
-.service-item {
-  position: relative;
-  height: 409px;
-  padding: 0 30px;
-  transition: .5s;
-  width: 100%;
+.tl-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: #fff;
+  border: 4px solid crimson;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .tl-left {
   left: 0;
-  background: none;
-  margin: 10px 0;
-  border-radius: 20px;
-  align-items: center;
-
-  color: #101010;
-  box-shadow: 5px 3px 3px #6d6d6d55;
-  border: 1px solid #b3b3b3;
 }
 
 .tl-right {
   left: 50%;
 }
 
+.tl-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #fff;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+}
 
+.tl-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #fff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
 
 .tl-right::after {
-  left: -15px;
+  left: -16px;
 }
 
 .tl-content {
   padding: 20px 30px;
+  background-color: #fff;
   position: relative;
   border-radius: 6px;
-}
-.tl-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -67,7 +87,8 @@
 
   .tl-container {
     width: 100%;
-
+    padding-left: 70px;
+    padding-right: 25px;
   }
 
   .tl-container::before {
@@ -84,25 +105,5 @@
 
   .tl-right {
     left: 0%;
-  }
-}
-/* extra Small */
-@media (min-width: 280px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .service-item {
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 5px rgb(188, 188, 188);
   }
 }

@@ -66,9 +66,8 @@ const ServiceItem = ({ title, image, description }) => (
     <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
       <div
         className="service-item bg-white rounded d-flex flex-column text-center align-items-center justify-content-center shadow p-5"
-        style={{ minHeight: "550px" }}
       >
-        <div>
+        <div className="mb-5" style={{position:"relative"}}>
           <img
             alt={title}
             src={image}

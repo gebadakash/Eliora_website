@@ -1,4 +1,4 @@
-@media only screen and (max-width: 376px) {
+/* @media only screen and (max-width: 376px) {
 
     .Buisness{
 
@@ -17,6 +17,14 @@
     }
 
 
+
+} */
+
+
+@media only screen and (max-width: 769px){
+.mtC {
+    margin-top: -33% !important;
+}
 
 }
 

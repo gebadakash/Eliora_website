@@ -45,21 +45,30 @@ const navLinks = [
 ];
 
 const NavBar = () => {
-
-
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
 
-    window.addEventListener('scroll', ()=>{
-      window.scrollY>50 ? setSticky(true) : setSticky(false);
-    })
-   
-  }, [])
-  
+  const handleMouseEnter = (index) => {
+    const dropdown = document.getElementById(`dropdown-${index}`);
+    dropdown.classList.add("show");
+  };
+
+  const handleMouseLeave = (index) => {
+    const dropdown = document.getElementById(`dropdown-${index}`);
+    dropdown.classList.remove("show");
+  };
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 ${sticky ? "dark-nav" : " " }`}>
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 ${
+        sticky ? "dark-nav" : " "
+      }`}
+    >
       <a href="index" className="navbar-brand p-0">
         <img
           className="img-fluid float-right"
@@ -81,7 +90,11 @@ const NavBar = () => {
           {navLinks.map((navItem, index) => (
             <React.Fragment key={index}>
               {navItem.dropdownItems ? (
-                <div className="nav-item dropdown">
+                <div
+                  className="nav-item dropdown"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                >
                   <NavLink
                     to={navItem.to}
                     className="nav-link dropdown-toggle"
@@ -89,7 +102,11 @@ const NavBar = () => {
                   >
                     {navItem.title}
                   </NavLink>
-                  <div className="dropdown-menu m-0">
+                  <div
+                    id={`dropdown-${index}`}
+                    className="dropdown-menu m-0"
+                    aria-labelledby="navbarDropdown"
+                  >
                     {navItem.dropdownItems.map((dropdownItem, subIndex) => (
                       <NavLink
                         key={subIndex}

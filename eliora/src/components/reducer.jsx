@@ -68,7 +68,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
 
@@ -86,7 +97,19 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionSubTitle:action.payload.ExcellenceSectionSubTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
       if(action.type === "WORDPRESS_PAGE"){
@@ -94,7 +117,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
       if(action.type === "APPDEVELOPMENT_PAGE"){
@@ -102,7 +136,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
       if(action.type === "Ecommerce_PAGE"){
@@ -110,7 +155,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
       if(action.type === "Graphics_PAGE"){
@@ -118,7 +174,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
 
@@ -127,7 +194,18 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
 
@@ -136,11 +214,31 @@ const reducer = (state, action) => {
         return{
           ...state,
           title:action.payload.title,
-          subTitle:action.payload.subTitle
+          subTitle:action.payload.subTitle,
+          DiscoverSectionTitle:action.payload.DiscoverSectionTitle,
+          DiscoverSectionSubTitle:action.payload.DiscoverSectionSubTitle,
+          DiscoverSectionParagraph:action.payload.DiscoverSectionParagraph,
+          DiscoverSectionImage:action.payload.DiscoverSectionImage,
+          DiscoverSectionButton:action.payload.DiscoverSectionButton,
+          ServiceTitle:action.payload.ServiceTitle,
+          ServiceContent:action.payload.ServiceContent,
+          ExcellenceSectionTitle:action.payload.ExcellenceSectionTitle,
+          ExcellenceSectionContent:action.payload.ExcellenceSectionContent,
+          ExcellenceSectionImage:action.payload.ExcellenceSectionImage,
+          ExcellenceSectionButton:action.payload.ExcellenceSectionButton,
         }
       }
 
       if(action.type === "PORTFOLIO_PAGE"){
+
+        return{
+          ...state,
+          title:action.payload.title,
+          subTitle:action.payload.subTitle
+        }
+      }
+
+      if(action.type === "CONTACT_PAGE"){
 
         return{
           ...state,

@@ -43,6 +43,7 @@ const BusinessSection = () => {
   ];
 
   return (
+    <div className="container-fluid py-5 wow fadeInUp mt-c mt-in" data-wow-delay="0.1s" style={{marginTop: "-90px;", visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
     <div className={`${styles.Buisness} container py-5`}>
       <div
         className="section-title text-center position-relative pb-3 mb-5 mx-auto"
@@ -65,7 +66,7 @@ const BusinessSection = () => {
             }}
           >
             <div
-              className={`${styles.serviceItem} rounded d-flex flex-column align-items-center justify-content-center text-center card-container`}
+              className={`${styles.serviceItem} bg-light shadow rounded d-flex flex-column align-items-center justify-content-center text-center`}
             >
               <img
                 alt="staffing services,  recruitment, staffing company, staffing agency"
@@ -84,6 +85,7 @@ const BusinessSection = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,29 @@
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const ExperienceExcellence = () => {
+
+    useEffect(() => {
+
+        const handleScrollToTop = () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    
+    
+        const navLinks = document.querySelectorAll('.navlink');
+        navLinks.forEach(link => {
+          link.addEventListener('click', handleScrollToTop);
+        });
+    
+    
+        return () => {
+          navLinks.forEach(link => {
+            link.removeEventListener('click', handleScrollToTop);
+          });
+        };
+      }, []);
+
+      
     return (
         <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style={{ visibility: 'visible', animationDelay: '0.1s', animationName: 'fadeInUp' }}>
             <div className="container">
@@ -9,7 +33,7 @@ const ExperienceExcellence = () => {
                             <h1 className="mb-0">Ready to Experience Excellence</h1>
                         </div>
                         <p className="mb-4" style={{ textAlign: 'justify' }}>Utilize Our responsive Website Development Service to unbolt Your Digital Potential. If you are looking for Affordable web development services for small businesses, Experienced web developers specializing in e-commerce platforms, and Responsive web development for seamless mobile browsing experience, you are at the right place. We design gorgeous, approachable, and responsive websites that capture visitors, encourage interaction, and strengthen your online presence. To create a website that has an impact, our talented team blends cutting-edge design, seamless functionality, and optimized performance. We’re dedicated to turning your vision into a reality from concept to launch that distinguishes you in the digital world.</p>
-                        <a href="#" className="btn btn-danger py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s" style={{ visibility: 'visible', animationDelay: '0.9s', animationName: 'zoomIn' }}>Get Your Website</a>
+                        <NavLink to="/contactus" className="btn btn-danger py-3 px-5 mt-3 wow zoomIn navlink" data-wow-delay="0.9s" style={{ visibility: 'visible', animationDelay: '0.9s', animationName: 'zoomIn' }}>Get Your Website</NavLink>
                     </div>
                     <div className="col-lg-6" style={{ minHeight: '250px' }}>
                         <div className="position-relative h-100">

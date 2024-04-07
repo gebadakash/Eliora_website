@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -22,6 +21,8 @@ import Ecommerce from "./pages/EcommerceDevelopment.jsx";
 import GraphicsLogo from "./pages/GraphicsLogo.jsx";
 import DigitalMarketing from "./pages/DigitalMarketing.jsx";
 import UiAndUx from "./pages/UiAndUx.jsx";
+import BlogDetails from "./components/BlogPageComponents/BlogDetails.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,16 @@ const router = createBrowserRouter([
       {
         path: "/uiuxdesign",
         element: <UiAndUx/>,
+      },
+
+      {
+        path:"/blogDetails",
+        element:<BlogDetails/>
+      },
+
+      {
+        path:"/contactus",
+        element:<Contact/>
       },
 
       {

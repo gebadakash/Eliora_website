@@ -1,0 +1,13 @@
+@media only screen and (max-width: 769px){
+.mt-c {
+    margin-top: -33% !important;
+}
+
+}
+
+@media only screen and (max-width: 769px){
+.mt-sc {
+    margin-top: -15% !important;
+}
+
+}

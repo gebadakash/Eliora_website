@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import PlacementHeader from "../components/PlacementPageComponents/PlacementHeader"
 import Frequently from "../components/E-commerceDevelopmentPageComponent/Frequently";
-import EcommerceService from "../components/E-commerceDevelopmentPageComponent/EcommerceService";
-import EcommerceAbout from "../components/E-commerceDevelopmentPageComponent/EcommerceAbout";
 import TechnologiesUsed from "../components/WebsiteDevelopmentPageComponents/TechnologiesUsed";
-import EcommerceOneStop from "../components/E-commerceDevelopmentPageComponent/EcommerceOneStop";
 import { useGlobalContext } from "../components/context";
+import Discover from "../components/Discover";
+import Service from "../components/Service";
+import Excellence from "../components/Excellence";
 
 const Ecommerce = () => {
 
@@ -17,9 +17,9 @@ const Ecommerce = () => {
   return (
     <>
     <PlacementHeader/>
-    <EcommerceService/>
-    <EcommerceAbout/>
-    <EcommerceOneStop/>
+    <Discover/>
+    <Service/>
+    <Excellence/>
     <TechnologiesUsed/>
     <Frequently/>
     </>

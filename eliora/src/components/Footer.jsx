@@ -1,27 +1,51 @@
 import styles from "../style/Footer.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useEffect } from "react";
+import { NavLink } from 'react-router-dom';
+
 
 const Footer = () => {
   const quickLinks = [
-    { title: "Home" },
-    { title: "About us" },
-    { title: "Client" },
-    { title: "Career" },
-    { title: "Gallery" },
-    { title: "Latest Blog" },
-    { title: "Contact us" },
+    { title: "Home", to:"/" },
+    { title: "About us", to:"/about" },
+    { title: "Client", to:"/clients" },
+    { title: "Career", to:"/career" },
+    { title: "Gallery", to:"/gallery" },
+    { title: "Latest Blog", to:"/blog" },
+    { title: "Contact us", to:"/contactus" },
   ];
 
   const Services = [
-    { title: "Web Designing" },
-    { title: "Web Development" },
-    { title: "Wordpress Development" },
-    { title: "App Development" },
-    { title: "E-Commerce Development" },
-    { title: "Graphics & Logo" },
-    { title: "Digital & Content Marketing" },
-    { title: "UI/UX Designing" },
+    { title: "Web Designing", to:"/websitedesign" },
+    { title: "Web Development", to:"/webDevelopment" },
+    { title: "Wordpress Development", to:"/wordpressdevelopment" },
+    { title: "App Development", to:"/appdevelopment" },
+    { title: "E-Commerce Development", to:"/ecommercedevelopment" },
+    { title: "Graphics & Logo", to:"/graphicsandlogo" },
+    { title: "Digital & Content Marketing", to:"/digitalandcontentmarketing" },
+    { title: "UI/UX Designing", to:"/uiuxdesign"},
   ];
+
+  useEffect(() => {
+
+    const handleScrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach(link => {
+      link.addEventListener('click', handleScrollToTop);
+    });
+
+
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', handleScrollToTop);
+      });
+    };
+  }, []);
+
 
   return (
     <>
@@ -42,20 +66,20 @@ const Footer = () => {
                 brought to life in a timely and cost-effective manner.
               </p>
               <div className={`${styles.footerIcons}`}>
-                <i className="bi bi-facebook text-primary"></i>
-                <i className="bi bi-instagram"></i>
-                <i className="bi bi-linkedin text-info"></i>
+                <a href="https://www.facebook.com/elioraitservices?mibextid=ZbWKwL" target="_blank"><i className="bi bi-facebook text-primary"></i></a>
+                <a href="https://instagram.com/eliora_website?igshid=MzRlODBiNWFlZA==" target="_blank"><i className="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/eliora-it-services/" target="_blank"><i className="bi bi-linkedin text-info"></i></a>
               </div>
 
              <h3 className={`${styles.contactUs}`}>Contact us now</h3>
 
-             <p>Subscribe to our newsletter to get our news & discounts delivered to you.</p>
+             <h7>Contact us to get started on your website development journey.</h7>
              
-             <input type="email" className="form-control" id="email-newsletter" value="" 
+             <input type="email" className="form-control mt-2" id="email-newsletter" value="" 
              placeholder="Email Address" aria-label="email-newsletter" aria-describedby="email-newsletter-addon" 
              required></input>
 
-              <button className="btn btn-primary mt-4" type="submit">SEND<i className="bi bi-send ms-2"></i></button>
+              <button className="btn btn-primary mt-2" type="submit">SEND<i className="bi bi-send ms-2"></i></button>
 
 
 
@@ -69,7 +93,7 @@ const Footer = () => {
                     {quickLinks.map((link, index) => (
                       <li className={styles.navItem} key={index}>
                         <i className="bi bi-arrow-right text-danger me-2"></i>
-                        <a>{link.title}</a>
+                        <NavLink to={link.to} className="navlink">{link.title}</NavLink>
                       </li>
                     ))}
                   </ul>
@@ -116,7 +140,7 @@ const Footer = () => {
                     {Services.map((link, index) => (
                       <li className={styles.navItem} key={index}>
                         <i className="bi bi-arrow-right text-danger me-2"></i>
-                        <a>{link.title}</a>
+                        <NavLink to={link.to} className="navlink">{link.title}</NavLink>
                       </li>
                     ))}
                   </ul>

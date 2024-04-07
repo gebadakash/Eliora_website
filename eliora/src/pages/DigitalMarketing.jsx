@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import PlacementHeader from "../components/PlacementPageComponents/PlacementHeader"
-import DigitialMarketingContent from "../components/DigitalMarketingPageComponents/DigitialMarketingContent";
-import DigitalMarketingAbout from "../components/DigitalMarketingPageComponents/DigitalMarketingAbout";
 import DynamicDigital from "../components/DigitalMarketingPageComponents/DynamicDigital";
 import DigitalContent from "../components/DigitalMarketingPageComponents/DigitalContent";
-import Contentmarketing from "../components/DigitalMarketingPageComponents/Contentmarketing";
 import Frequently from "../components/DigitalMarketingPageComponents/Frequently";
 import { useGlobalContext } from "../components/context";
 import DigitalMarketingCard from "../components/DigitalMarketingPageComponents/DigitalMarketingCard";
+import Discover from "../components/Discover";
+import Service from "../components/Service";
+import Excellence from "../components/Excellence";
 
 
 
@@ -21,9 +21,9 @@ const DigitalMarketing = () => {
   return (
     <>
       <PlacementHeader/>
-      <DigitialMarketingContent/>
-      <DigitalMarketingAbout/>
-      <Contentmarketing/>
+      <Discover/>
+      <Service/>
+      <Excellence/>
       <DynamicDigital/>
       <DigitalMarketingCard/>
       <DigitalContent/>
