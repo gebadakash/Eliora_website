@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "../../style/BlogPostSection.module.css";
+import styles from "./BlogPostSection.module.css";
 import { useEffect } from "react";
 
 

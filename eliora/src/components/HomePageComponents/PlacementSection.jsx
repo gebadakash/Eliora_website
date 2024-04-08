@@ -1,4 +1,3 @@
-import "./PlacementSection.css";
 import place from "../../assets/place.png";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";

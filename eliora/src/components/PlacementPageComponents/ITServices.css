@@ -16,3 +16,11 @@
     font-size: 15px;
     color: #848484;
 }
+
+@media only screen and (max-width: 769px){
+
+.mt-c {
+    margin-top: -15% !important;
+}
+
+}

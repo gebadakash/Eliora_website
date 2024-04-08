@@ -47,16 +47,6 @@
     background-color: #fff;
 }
 
-.serviceItem:hover {
-    background: crimson;
-    box-shadow: 1px 1px 5px rgb(220, 220, 220);
-}
-
-.serviceItem:hover p{
-    color: white;
-}
-
-
 .serviceItem h4{
     font-family:"Inter", sans-serif;
     font-weight: bold;

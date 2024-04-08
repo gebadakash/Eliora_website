@@ -1,4 +1,4 @@
-import styles from "../../style/Business.module.css";
+import styles from "./Business.module.css";
 
 const BusinessSection = () => {
   const rows = [

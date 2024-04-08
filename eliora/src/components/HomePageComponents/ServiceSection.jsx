@@ -22,7 +22,7 @@ const serviceCards = [
 
 const ServiceSection = () => {
   return (
-    <div className={`container-fluid  py-5 pt-lg-0 ${styles.facts}`}>
+    <div className={`container-fluid py-5 pt-lg-0 ${styles.facts} ${styles.service}`}>
       <div className="container  py-5 pt-lg-0">
         <div className="row gx-0">
           {serviceCards.map((card, index) => (

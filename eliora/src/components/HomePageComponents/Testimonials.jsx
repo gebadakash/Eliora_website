@@ -24,7 +24,7 @@ const Testimonials = () => {
         <Splide
           options={{
             perPage: 1,
-            autoplay: true,
+            autoplay: false,
             speed: 1000,
             rewind: true,
             rewindByDrag: true,
