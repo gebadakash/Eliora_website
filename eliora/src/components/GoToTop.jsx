@@ -1,38 +1,35 @@
-import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import "./GoToTop.css";
+import { FaArrowUp } from "react-icons/fa6";
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const goToBtn = () => {
-    window.scroll({ top: 0, left: 0, behavior: "smooth" });
-  };
-
-  const listenToScroll = () => {
-    let heightToHidden = 250;
-
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > heightToHidden) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
   useEffect(() => {
+    const listenToScroll = () => {
+      const heightToHidden = 250;
+      const winScroll = window.scrollY;
+
+      if (winScroll > heightToHidden) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
     window.addEventListener("scroll", listenToScroll);
-    return () => window.removeEventListener('scroll', listenToScroll);
+
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+    };
   }, []);
 
   return (
     <>
       {isVisible && (
-        <div className="ButtonScroll" onClick={goToBtn}>
-          <FaArrowUp className="top-btn--icon" style={{backgroundColor:"tomato", color:"white"}}></FaArrowUp>
-        </div>
+        <a href="#" className="back-to-top d-flex align-items-center justify-content-center active">
+          <FaArrowUp className="arrow" />
+        </a>
       )}
     </>
   );

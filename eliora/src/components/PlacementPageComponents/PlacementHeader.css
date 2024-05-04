@@ -1,6 +1,6 @@
 .bgHeader {
     background-size: cover;
-    background: linear-gradient(rgb(251 253 255 / 70%), rgb(6 6 6 / 44%),rgb(6 6 6 / 44%)),url(../../../public/images/bannerforall.jpg) center center no-repeat;
+    background: linear-gradient(rgba(73, 75, 76, 0.7), rgb(6 6 6 / 44%),rgb(6 6 6 / 44%)),url(../../../public/images/bannerforall.jpg) center center no-repeat;
 }
 
 @media (max-width:999px) {

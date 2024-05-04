@@ -7,8 +7,7 @@ import NavBar from "./components/NavBar";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GoToTop from "./components/GoToTop";
-import WhatsApp from "./components/WhatsApp";
-import Phone from "./components/Phone";
+import FixedButtons from "./components/FixedButtons";
 
 const App = () => {
   return (
@@ -17,8 +16,7 @@ const App = () => {
       <TopBarSection />
       <NavBar />
       <Outlet />
-      <Phone/>
-      <WhatsApp/>
+      <FixedButtons/>
       <GoToTop/>
       <Footer />
     </div>

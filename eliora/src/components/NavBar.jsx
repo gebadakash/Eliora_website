@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import Logo from "../assets/elioralogo.png";
 import "./NavBar.css";
@@ -44,102 +44,121 @@ const navLinks = [
   },
 ];
 
-  const NavBar = () => {
-    const handleNavbarToggle = () => {
-      const navbarCollapse = document.getElementById("navbarCollapse");
-      if (navbarCollapse.classList.contains("show")) {
-        navbarCollapse.classList.remove("show");
+const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const navbarRef = useRef(null);
+
+  const handleNavbarToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleDropdownToggle = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  useEffect(() => {
+    const closeDropdown = (event) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+        setActiveDropdown(null);
       }
     };
-  
-    return (
-      <nav className="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-        <a href="index" className="navbar-brand p-0">
-          <img
-            className="img-fluid float-right"
-            src={Logo}
-            width="150px"
-            alt="logo"
-          />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <FaBars />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
-          <div className="navbar-nav ms-auto py-0">
-            {navLinks.map((navItem, index) => (
-              <React.Fragment key={index}>
-                {navItem.dropdownItems ? (
-                  <div className="nav-item dropdown">
-                    <NavLink
-                      to={navItem.to}
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      onClick={(e) => e.preventDefault()} 
-                    >
-                      {navItem.title}
-                    </NavLink>
-                    <div
-                      className="dropdown-menu m-0"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      {navItem.dropdownItems.map((dropdownItem, subIndex) => (
-                        <NavLink
-                          key={subIndex}
-                          to={dropdownItem.to}
-                          onClick={() => {
-                            handleNavbarToggle();
-                          }}
-                          className="dropdown-item"
-                        >
-                          {dropdownItem.title}
-                        </NavLink>
-                      ))}
-                    </div>
-                  </div>
-                ) : navItem.href ? (
-                  <a
-                    href={navItem.href}
-                    target={navItem.target}
-                    className="nav-item nav-link"
-                    onClick={() => {
-                      handleNavbarToggle();
-                    }}
-                  >
-                    {navItem.title}
-                  </a>
-                ) : (
+
+    document.addEventListener("click", closeDropdown);
+
+    return () => {
+      document.removeEventListener("click", closeDropdown);
+    };
+  }, []);
+
+  return (
+    <nav
+      className="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0"
+      ref={navbarRef}
+    >
+      <a href="index" className="navbar-brand p-0">
+        <img
+          className="img-fluid float-right"
+          src={Logo}
+          width="150px"
+          alt="logo"
+        />
+      </a>
+      <button
+        className="navbar-toggler"
+        type="button"
+        onClick={handleNavbarToggle}
+      >
+        <FaBars style={{ borderRadius: "0", boxShadow: "none" }} />
+      </button>
+      <div className={"collapse navbar-collapse" + (isOpen ? " show" : "")}>
+        <div className="navbar-nav ms-auto py-0">
+          {navLinks.map((navItem, index) => (
+            <React.Fragment key={index}>
+              {navItem.dropdownItems ? (
+                <div className="nav-item dropdown">
                   <NavLink
-                    exact
                     to={navItem.to}
-                    className="nav-item nav-link"
-                    onClick={() => {
-                      handleNavbarToggle();
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleDropdownToggle(index);
                     }}
                   >
                     {navItem.title}
                   </NavLink>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-          <NavLink
-            to="/contactus"
-            className="btn btn-danger py-2 px-4 ms-3"
-            onClick={() => {
-              handleNavbarToggle();
-            }}
-          >
-            Contact
-          </NavLink>
+                  <div
+                    className={"dropdown-menu" + (activeDropdown === index ? " show" : "")}
+                  >
+                    {navItem.dropdownItems.map((dropdownItem, subIndex) => (
+                      <NavLink
+                        key={subIndex}
+                        to={dropdownItem.to}
+                        onClick={() => setIsOpen(false)}
+                        className="dropdown-item"
+                      >
+                        {dropdownItem.title}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              ) : navItem.href ? (
+                <a
+                  href={navItem.href}
+                  target={navItem.target}
+                  className="nav-item nav-link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {navItem.title}
+                </a>
+              ) : (
+                <NavLink
+                  exact
+                  to={navItem.to}
+                  className="nav-item nav-link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {navItem.title}
+                </NavLink>
+              )}
+            </React.Fragment>
+          ))}
         </div>
-      </nav>
-    );
-  };
-  
-  export default NavBar;
+        <NavLink
+          to="/contactus"
+          className="btn btn-danger py-2 px-4 ms-3"
+          onClick={() => setIsOpen(false)}
+        >
+          Contact
+        </NavLink>
+      </div>
+    </nav>
+  );
+};
+
+export default NavBar;

@@ -38,7 +38,7 @@ const StaffingSection = () => {
               <img alt="employment agencies near me" className="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="images/staf.png" style={{ objectFit: "contain" }} />
             </div>
           </div>
-          <div className={`col-lg-6 mt-sc`}>
+          <div className={`col-lg-6`}>
             <div className={`position-relative pb-2 mb-2`}>
               <h3 className="mb-0 text-dark">Full Time Employment Staffing</h3>
             </div>

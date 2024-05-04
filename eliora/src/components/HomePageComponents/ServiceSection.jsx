@@ -27,7 +27,7 @@ const ServiceSection = () => {
         <div className="row gx-0">
           {serviceCards.map((card, index) => (
             <div key={index} className={`col-lg-4 wow zoomIn`} data-wow-delay={`${index * 0.3}s`}>
-              <div className={`shadow d-flex align-items-center justify-content-center p-4 ${styles.card}`} style={{ height: '150px',borderRadius:"20px" }}>
+              <div className={`shadow d-flex align-items-center justify-content-center p-4 ${styles.card}`} style={{ height: '150px',borderRadius:"5px" }}>
                 <div className={`d-flex align-items-center justify-content-center rounded mb-2 ${styles.IconSec}`} style={{ width: '60px', height: '60px', fontSize: '2.5rem' }}>
                   <i className={`bi ${card.icon}`}></i>
                 </div>

@@ -172,69 +172,61 @@ const BlogPagePosts = () => {
       ];
 
 
-   return (
-    <div
-      className="container-fluid py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-      style={{
-        visibility: "visible;",
-        animationDelay: "0.1s;",
-        animationName: "fadeInUp;",
-      }}
-    >
-      <div className="container py-5">
-        <div className="row g-5">
-          {rows.map((row, index) => (
-            <div
-              className="col-lg-4 wow slideInUp"
-              data-wow-delay="0.3s"
-              key={index}
-              style={{
-                visibility: "visible;",
-                animationDelay: "0.3s;",
-                animationName: "slideInUp;",
-              }}
-            >
-              <div className="blog-item bg-light  bg-white rounded overflow-hidden">
-                <div className="blog-img position-relative overflow-hidden">
-                  <img
-                    alt="staffing services,  recruitment, staffing company, staffing agency"
-                    className="img-fluid"
-                    src={row.image}
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="d-flex mb-3">
-                    <small className="me-3">
-                    <i className="bi bi-person text-warning me-2"></i>
-                      {row.Blogdate}
-                    </small>
-                    <small>
-                      <i className="bi bi-calendar-check text-warning me-2"></i>
-                      {row.subtitle}
-                    </small>
+      return (
+        <div className="container-fluid py-5">
+          <div className="container">
+            <div className="row">
+              {rows.map((row, index) => (
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={index}>
+                  <div className="blog-item bg-light bg-white rounded overflow-hidden">
+                    <div className="blog-img position-relative overflow-hidden">
+                      <img
+                        alt="staffing services, recruitment, staffing company, staffing agency"
+                        className="img-fluid"
+                        src={row.image}
+                      />
+                    </div>
+                    <div className="p-4">
+                      <div className="d-flex mb-3">
+                        <small className="me-3">
+                          <i className="bi bi-person text-warning me-2"></i>
+                          {row.Blogdate}
+                        </small>
+                        <small>
+                          <i className="bi bi-calendar-check text-warning me-2"></i>
+                          {row.subtitle}
+                        </small>
+                      </div>
+                      <h4
+                        className="mb-3"
+                        style={{ fontFamily: "sans-serif", fontWeight: "700" }}
+                      >
+                        {row.title}
+                      </h4>
+                      <p
+                        style={{
+                          textAlign: "justify",
+                          wordSpacing: "-2px",
+                          fontFamily: "sans-serif",
+                        }}
+                      >
+                        {row.content}
+                      </p>
+                      <NavLink
+                        className="text-uppercase btn btn-danger py-2 px-4"
+                        to="/blogDetails"
+                        style={{ textDecoration: "none" }}
+                      >
+                        {row.Button}
+                      </NavLink>
+                    </div>
                   </div>
-                  <h4 className="mb-3" style={{fontFamily:"sans-serif", fontWeight:"700"}}>
-                   {row.title}
-                  </h4>
-                  <p style={{ textAlign: "justify;", wordSpacing: "-2px;", fontFamily:"sans-serif" }}>
-                    {row.content}
-                  </p>
-                  <NavLink
-                    className="text-uppercase btn btn-danger py-2 px-4"
-                    to="/blogDetails"
-                    style={{textDecoration:"none"}}
-                  >
-                    {row.Button}
-                  </NavLink>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      );
 }
 
 export default BlogPagePosts

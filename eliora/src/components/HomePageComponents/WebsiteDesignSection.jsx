@@ -26,11 +26,11 @@ const WebsiteDesignSection = () => {
 
 
   return (
-    <div className="container-fluid py-5 wow fadeInUp mt-c mt-in" data-wow-delay="0.1s" style={{ marginTop: "-75px" }}>
+    <div className="container-fluid py-5 wow fadeInUp websiteDesignSection mt-in" data-wow-delay="0.1s" style={{ marginTop: "-75px" }}>
       <div className="container py-5">
         <div className="row g-5">
           <div className={`col-lg-7`}>
-            <div className={` position-relative pb-3 mb-5`}>
+            <div className={` position-relative pb-3 mb-5 headings`}>
               <h5 className={` fw-bold text-uppercase`}>Website Design and Development Company in India</h5>
               <h1 className={` mb-0 text-danger`}>Your Gateway to Exceptional Website Design and Development Services</h1>
             </div>

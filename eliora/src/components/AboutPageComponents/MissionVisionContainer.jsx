@@ -17,7 +17,7 @@ const MissionVisionContainer = () => {
     },
     {
       title: "Our Vision",
-      description: "Our Vision statement is to Go along with our happy customers for a rewarding career/growth. We put our best to align every prospect with your business values and goals. We are dealing with adventure every day, and the same leads us to ultimate success.",
+      description: "At eliora Technology, our vision is to journey alongside our delighted customers,With unwavering dedication, we strive to harmonize every opportunity with the core values and aspirations of your business.turning them into stepping stones on our path to unparalleled success. Together, we embark on a transformative voyage, innovation, and excellence propel us towards our collective goals.",
     },
   ];
 
